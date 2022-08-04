@@ -18,3 +18,6 @@ class Post(models.Model):
     # 어떻게 보여줄지 알려주는듯
     def __str__(self):
         return f'[{self.pk}] {self.title}'
+
+    def get_absolute_url(self):
+        return f'/blog/{self.pk}'
