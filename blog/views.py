@@ -23,7 +23,7 @@ from .models import Post
 
 class PostList(ListView):
     model = Post
-    template_name = 'blog/index.html'
+    # template_name = 'blog/index.html'
     ordering = '-pk'  # 내림차순으로 정렬해서 ListView해줘
 
 
@@ -42,4 +42,4 @@ class PostList(ListView):
 class PostDetail(DetailView):
     model = Post
     # 이거 안바꾸고 그냥 파일 이름을 post_detail.html로 수정하면 가능
-    template_name = 'blog/single_post_page.html'
+    # template_name = 'blog/single_post_page.html'
