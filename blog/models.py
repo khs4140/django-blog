@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
@@ -7,6 +8,8 @@ class Post(models.Model):
     title = models.CharField(max_length=30)
     content = models.TextField()
 
+    head_image = models.ImageField(
+        upload_to='blog/images/%Y/%m/%d', blank=True)
     created_at = models.DateTimeField(
         auto_now=True)  # auto_now True 지정시 자동으로 설정됨
     updated_at = models.DateTimeField(
