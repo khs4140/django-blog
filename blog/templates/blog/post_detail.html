@@ -56,11 +56,16 @@
                         <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                     </header>
                     <!-- Preview image figure-->
+                    {% if post.head_image %}
                     <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="image cap" /></figure>
+                    {% endif %}
                     <!-- Post content-->
                     <section class="mb-5">
                         <p>{{ post.content }}</p>
                     </section>
+                    {% if post.file_upload %}
+                    <a href="{{ post.file_upload.url }}">{{ post.file_upload }}</a> 
+                    {% endif %}
                 </article>
                 <!-- Comments section-->
                 <section class="mb-5">

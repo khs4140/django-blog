@@ -8,8 +8,17 @@ class Post(models.Model):
     title = models.CharField(max_length=30)
     content = models.TextField()
 
+    # 이미지 업로드 blank는 Null 허용
     head_image = models.ImageField(
         upload_to='blog/images/%Y/%m/%d', blank=True)
+
+    # 파일 업로드!
+    # post.file_upload = 파일 이름
+    # post.file_upload.url = 파일 있는 경로
+    file_upload = models.FileField(
+        upload_to='blog/files/%Y/%m/%d', blank=True
+    )
+
     created_at = models.DateTimeField(
         auto_now=True)  # auto_now True 지정시 자동으로 설정됨
     updated_at = models.DateTimeField(
