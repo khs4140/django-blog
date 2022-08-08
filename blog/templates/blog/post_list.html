@@ -91,7 +91,9 @@
                 {% for p in post_list %}
                 <div class="card mb-4">
                     {% if p.head_image %}
-                    <a href="#!"><img class="card-img-top" src="{{ p.head_image.url }}" alt="..." /></a>
+                    <a href="#!"><img class="card-img-top" src="{{ p.head_image.url }}" alt="{{ p }} Head Image" /></a>
+                    {% else %}
+                    <a href="#!"><img class='card-img-top' src="https://picsum.photos/seed/{{p.id}}/800/400" at="random_image"></a> <!-- Random Image 가져올 수 있는 사이트!!-->
                     {% endif %}
                     <div class="card-body">
                         <div class="small text-muted">January 1, 2022</div>

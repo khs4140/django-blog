@@ -24,7 +24,7 @@ class Post(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True)  # 글 작성시 아예 날짜/시간 정하는 것이 안나옴!
 
-    # author 나중에 작ㅇ
+    # author 나중에 작업
 
     # admin -> Post 저장된 내용 확일할 수 있도록 __str__ 함수 생성
     # 어떻게 보여줄지 알려주는듯
